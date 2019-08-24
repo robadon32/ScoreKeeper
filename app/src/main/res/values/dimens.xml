@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="team_margin">15dp</dimen>
+    <dimen name="team_text_size">30sp</dimen>
+
+    <dimen name="inning_button_margin">18dp</dimen>
+    <dimen name="inning_button_text_size">30sp</dimen>
+    <dimen name="inning_button_width">50dp</dimen>
+
+    <dimen name="current_inning_margin">15dp</dimen>
+    <dimen name="current_inning_padding">10dp</dimen>
+    <dimen name="current_inning_text_size">60sp</dimen>
+
+    <dimen name="score_button_margin">15dp</dimen>
+    <dimen name="score_button_padding">10dp</dimen>
+    <dimen name="score_button_text_size">60sp</dimen>
+
+    <dimen name="count_text_size">30sp</dimen>
+    <dimen name="ball_count_margin">28dp</dimen>
+    <dimen name="strike_count_marginL">18dp</dimen>
+    <dimen name="strike_count_marginB">119dp</dimen>
+
+    <dimen name="count_button_padding">10dp</dimen>
+    <dimen name="count_button_width">120dp</dimen>
+    <dimen name="count_button_text_size">30sp</dimen>
+    <dimen name="strike_button_margin">57dp</dimen>
+
+    <dimen name="reset_width">120dp</dimen>
+    <dimen name="reset_marginB">29dp</dimen>
+    <dimen name="reset_text_size">30sp</dimen>
+
+    <dimen name="run_button_width">120dp</dimen>
+    <dimen name="run_button_text_size">30sp</dimen>
+    <dimen name="g_run_marginL">42dp</dimen>
+    <dimen name="g_run_marginT">115dp</dimen>
+    <dimen name="h_run_marginR">57dp</dimen>
+
+</resources>

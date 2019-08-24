@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ScoreKeeper</string>
+    <string name="guest_name">Guest</string>
+    <string name="home_name">Home</string>
+    <string name="starting_score">0</string>
+    <string name="starting_inning">0</string>
+    <string name="count">-----</string>
+    <string name="ball_button">Ball</string>
+    <string name="strike_button">Strike</string>
+    <string name="home_button">H Run</string>
+    <string name="guest_button">G Run</string>
+    <string name="reset_button">Reset</string>
+    <string name="increase_inning">+</string>
+    <string name="decrease_inning">-</string>
+</resources>
