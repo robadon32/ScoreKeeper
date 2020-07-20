@@ -10,12 +10,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    int guestScore = 0;
-    int homeScore = 0;
-    int ballCount = 0;
-    int strikeCount = 0;
-    int outCount = 0;
-    int inningCount = 1;
+    int guestScore, homeScore, ballCount, strikeCount, outCount, inningCount;
     boolean isGuestTurn = true;
     TextView guestView, homeView;
 
@@ -24,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        inningCount = 1;
         guestView = findViewById(R.id.guest);
         homeView = findViewById(R.id.home);
         guestView.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
@@ -177,21 +173,9 @@ public class MainActivity extends AppCompatActivity {
      * Reset all values.
      */
     public void reset(View v) {
-        displayGuestScore(0);
-        displayHomeScore(0);
-        displayInning(1);
-        displayOutCount("-----");
-        displayStrikeCount("-----");
-        displayBallCount("-----");
-        guestScore = 0;
-        homeScore = 0;
-        ballCount = 0;
-        strikeCount = 0;
-        inningCount = 1 ;
-        guestView.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
-        homeView.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.topOfInning)));
+        clear();
     }
-    
+
 
     /**
      * Displays the given score for Guest.
@@ -246,26 +230,32 @@ public class MainActivity extends AppCompatActivity {
      */
     private void checkForWinner() {
         if(inningCount >= 9 && (guestScore > homeScore || guestScore < homeScore)) {
+            int difference;
             Intent intent = new Intent(this, WinnerActivity.class);
             if(guestScore > homeScore) {
-                intent.putExtra("winner", "Ball Game! The away team wins!");
+                difference = guestScore - homeScore;
+                intent.putExtra("winner", "Ball Game! The away team wins by " + difference + "!");
             } else {
-                intent.putExtra("winner", "Ball Game! The home team wins!");
+                difference = homeScore - guestScore;
+                intent.putExtra("winner", "Ball Game! The home team wins by " + difference + "!");
             }
             startActivity(intent);
-            displayGuestScore(0);
-            displayHomeScore(0);
-            displayInning(1);
-            displayOutCount("-----");
-            displayStrikeCount("-----");
-            displayBallCount("-----");
-            guestScore = 0;
-            homeScore = 0;
-            ballCount = 1;
-            strikeCount = 1;
-            inningCount = 1;
-            guestView.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
-            homeView.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.topOfInning)));
+            clear();
         }
+    }
+    private void clear() {
+        displayGuestScore(0);
+        displayHomeScore(0);
+        displayInning(1);
+        displayOutCount("-----");
+        displayStrikeCount("-----");
+        displayBallCount("-----");
+        guestScore = 0;
+        homeScore = 0;
+        ballCount = 0;
+        strikeCount = 0;
+        inningCount = 1 ;
+        guestView.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
+        homeView.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.topOfInning)));
     }
 }
