@@ -13,4 +13,5 @@
     <string name="increase_inning">+</string>
     <string name="decrease_inning">-</string>
     <string name="winning_team">Winner</string>
+    <string name="textview_two">Congratulations!</string>
 </resources>

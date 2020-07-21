@@ -35,7 +35,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Congratulations!"
+        android:text="@string/textview_two"
         android:textColor="#FAC219"
         android:textSize="50sp"
         android:textStyle="bold"
