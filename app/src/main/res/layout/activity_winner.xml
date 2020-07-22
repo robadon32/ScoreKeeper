@@ -23,6 +23,7 @@
         android:id="@+id/imageView"
         android:layout_width="254dp"
         android:layout_height="273dp"
+        android:contentDescription="@string/trophy_photo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -37,7 +38,7 @@
         android:layout_height="wrap_content"
         android:text="@string/textview_two"
         android:textColor="#FAC219"
-        android:textSize="50sp"
+        android:textSize="45sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,38 +47,52 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.247" />
 
-<!--    <ImageView-->
-<!--        android:id="@+id/imageView2"-->
-<!--        android:layout_width="55dp"-->
-<!--        android:layout_height="52dp"-->
-<!--        app:srcCompat="@android:drawable/ic_menu_call"-->
-<!--        tools:layout_editor_absoluteX="113dp"-->
-<!--        tools:layout_editor_absoluteY="589dp" />-->
+    <ImageView
+        android:id="@+id/imageView_call"
+        android:layout_width="55dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="@string/phone_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:srcCompat="@android:drawable/ic_menu_call" />
 
-<!--    <ImageView-->
-<!--        android:id="@+id/imageView3"-->
-<!--        android:layout_width="73dp"-->
-<!--        android:layout_height="57dp"-->
-<!--        app:srcCompat="@android:drawable/stat_notify_chat"-->
-<!--        tools:layout_editor_absoluteX="195dp"-->
-<!--        tools:layout_editor_absoluteY="584dp" />-->
+    <ImageView
+        android:id="@+id/imageView_text"
+        android:layout_width="55dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginLeft="88dp"
+        android:contentDescription="@string/message_icon"
+        app:layout_constraintStart_toStartOf="@+id/imageView_call"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:srcCompat="@android:drawable/stat_notify_chat" />
 
-<!--    <ImageView-->
-<!--        android:id="@+id/imageView4"-->
-<!--        android:layout_width="67dp"-->
-<!--        android:layout_height="57dp"-->
-<!--        app:srcCompat="@android:drawable/ic_dialog_map"-->
-<!--        tools:layout_editor_absoluteX="310dp"-->
-<!--        tools:layout_editor_absoluteY="586dp" />-->
+    <ImageView
+        android:id="@+id/imageView_map"
+        android:layout_width="55dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/map_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView_text"
+        app:layout_constraintTop_toTopOf="@+id/imageView_text"
+        app:srcCompat="@android:drawable/ic_dialog_map" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/textView2"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Share:"-->
-<!--        android:textColor="#FAC219"-->
-<!--        android:textSize="30sp"-->
-<!--        tools:layout_editor_absoluteX="19dp"-->
-<!--        tools:layout_editor_absoluteY="589dp" />-->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:text="@string/share_view"
+        android:textColor="#FAC219"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView" />
 
 </android.support.constraint.ConstraintLayout>

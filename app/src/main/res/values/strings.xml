@@ -14,4 +14,9 @@
     <string name="decrease_inning">-</string>
     <string name="winning_team">Winner</string>
     <string name="textview_two">Congratulations!</string>
+    <string name="share_view">Share:</string>
+    <string name="trophy_photo">trophy</string>
+    <string name="message_icon">message icon</string>
+    <string name="map_icon">map icon</string>
+    <string name="phone_icon">phone icon</string>
 </resources>
